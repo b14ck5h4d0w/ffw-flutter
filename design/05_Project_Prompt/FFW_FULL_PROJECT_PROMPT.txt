@@ -1,0 +1,103 @@
+FFW — FANTASY FOOTBALL WARZONE
+FULL PROJECT PROMPT FOR CLAUDE / CODEX / FLUTTER + FLASK
+============================================================
+
+PROJECT GOAL
+Build a production-ready responsive application named FFW — Fantasy Football Warzone. It expands official Fantasy Premier League data into private/public leagues, clans, Ranking Mode, Civil War, Last Survivor, Head-to-Head, live match tracking, history, Hall of Fame and a carefully protected official-FPL transfer workflow.
+
+REFERENCE PACK
+The ZIP contains 67 logical screens (A01-A63 + T01-T04), each with a Mobile reference, Desktop reference and a combined presentation board. Treat these images as visual references only. Rebuild the UI natively in Flutter; NEVER embed whole-page screenshots as app backgrounds.
+
+DESIGN SYSTEM
+Name: FFW Dark Cinematic High-Fidelity Esports UI System.
+Base: #03080D / #050A0D. Panels: #07141B / #0A1D25. Border: #14434D. Text: #F4F8FA. Muted: #87A3AE. Primary neon teal: #12EFB4. Cyan: #2BCDFF. Gold: #F4BF3A. Danger red: #FF455D. Survivor purple: #8B5CF6.
+Use Anton/Teko/Oswald-like condensed display typography for large headings and Inter for UI/body text. The Flutter production build should use Anton (or an approved equivalent) for display and Inter for everything else.
+
+VISUAL LANGUAGE
+Every page must be high-fidelity and information-dense, not a generic SaaS dashboard. Use cinematic stadium hero/cover banners, page-specific logos/badges, contextual football artwork, strong visual hierarchy, glossy glass/HUD cards, thin neon borders, statistics, tabs, tables, history/activity panels, side modules, charts and page-specific actions. The page-specific identity must be obvious immediately.
+
+RESPONSIVE ARCHITECTURE
+Mobile 0-599dp: top app bar, 1-column composition, bottom navigation, stacked cards, horizontal tab scroll, touch targets >=44dp.
+Tablet 600-1023dp: navigation rail, 2-column composition.
+Desktop >=1024dp: persistent header/rail, cinematic hero, stat strip, tab navigation, 2-3 column content. Desktop must be recomposed rather than stretched mobile.
+
+TECH STACK
+Frontend: Flutter (mobile + desktop/web responsive).
+Backend: Flask REST API.
+Database: PostgreSQL recommended.
+Realtime: WebSockets/Socket.IO for live scores, clan chat, Civil War projection, H2H and notifications.
+Background jobs: Celery/RQ + Redis for FPL sync, fixture refresh, notification dispatch and scheduled mode calculations.
+Storage: S3-compatible object storage for admin-managed images/banners/logos.
+Authentication: email/password + secure session/JWT; FPL connection handled securely; never expose credentials to the app logs.
+
+CORE FLUTTER COMPONENTS
+FFWScaffold, FFWResponsiveShell, FFWMobileTopBar, FFWDesktopHeader, FFWNavigationRail, FFWBottomNav, FFWHeroBanner, FFWModeBadge, FFWGlassCard, FFWStatCard, FFWStatusPill, FFWDataTable, FFWFixtureCard, FFWActivityRow, FFWChartCard, FFWPlayerRow, FFWClanRow, FFWLeagueCard, FFWFormField, FFWTabs, FFWPrimaryButton, FFWOutlineButton, FFWPitchView, FFWRoundCard, FFWTimeline, FFWBracket, FFWSlideConfirm.
+
+ADMIN-MANAGED MEDIA — REQUIRED
+All important images must be replaceable from Admin Panel > Media / Design Assets. No important logo/banner/photo should be permanently hard-coded. Admin features: upload, replace, preview, mobile variant, desktop variant, crop/focal point, enable/disable, restore default, recommended dimensions, compression/optimization, alt text, version number, updated_at, updated_by.
+Suggested keys: branding.logo_ffw, branding.app_icon, branding.splash_logo, background.stadium_mobile, background.stadium_desktop, character.player_10_mobile, character.player_10_desktop, banner.home, banner.league, banner.clan, banner.ranking, banner.civil_war, banner.last_survivor, banner.h2h, banner.hall_of_fame, banner.transfer, badge.mode.ranking, badge.mode.civil_war, badge.mode.last_survivor, badge.mode.h2h.
+
+AUTH / FPL CONNECTION
+A01-A10 cover splash, welcome, login, signup, password recovery, FPL connection, syncing, successful import, onboarding and notification preferences. Show secure-sync explanations and clear status states.
+
+HOME / FPL DATA
+A11-A20 cover dashboard, squad/pitch, gameweek points, player details, player full stats, fixtures, live match centre, match detail, event timeline and lineups/stats. Data should be driven by synchronized FPL/player/fixture data.
+
+LEAGUES
+A21-A32 cover My Leagues, discovery, joining, creation, overview, standings, member/manager permissions, join requests, rules, history, Hall of Fame and season detail. Support public/private leagues, join codes, owners/managers, league media and independent game modes. League code grants join/discovery access only; manager privileges must be explicitly granted by the owner.
+
+RANKING MODE
+A34-A37. Pure points/ranking mode with season leaderboard, rank movement, gameweek detail, charts, top managers, awards and optional public prize pool.
+
+CIVIL WAR
+A38-A43. Clan-vs-clan Gameweek competition. Civil War NEVER uses SAFE / AT RISK / OUT. Show clan Gameweek score, position and War Points. Highest scoring clan gets 10 War Points; lowest gets 1; intermediate ranks follow configured scale. If clan count changes, admin can configure a scale while preserving highest=10 and lowest=1. During live GW show PROJECTED War Points; finalize only when FPL Gameweek data is official. All participating clans must use the same configured member count (minimum 4; admin may configure 4-10). Every eligible clan member's official GW points count.
+
+LAST SURVIVOR
+A44-A50. Round-based elimination mode. Before a round is final, bottom K managers are AT RISK only. After the round completes, bottom K become OUT. Schedule Builder must support 6-40 players and auto-generate rounds/phases toward a GW36-38 final. Example 17-player pattern: phase 1 uses 3-GW rounds to reduce 17 toward 10; phase 2 uses 2-GW rounds to reduce 10 toward 3; final has 3 managers in GW36-38. The engine must create a valid pattern for any supported player count, respecting final timing. Show a preview before creating the mode.
+
+HEAD TO HEAD
+A51-A55. Manager-vs-manager fixtures, live matchup, W-D-L standings, points for/against, results, playoffs/bracket.
+
+CLANS
+A56-A60. Clan overview, members, performance, requests/invites and settings. Clan size configurable 4-10 where a mode requires it. Support owner/captain/member roles, join approval, crest/banner, motto, history, communication links, achievements and stats.
+
+PROFILE / SETTINGS
+A61-A63. Profile, editing and connected-FPL/account settings. Include sync status, privacy, security, notifications, linked devices and disconnect/reconnect controls.
+
+TRANSFER WORKFLOW — CRITICAL
+T01 Build Team -> T02 Review Changes -> T03 Slide to Confirm -> T04 Success. Users first build a draft and review all transfer changes. The final confirmation must be a horizontal slide gesture: the user drags a slider from one side to the other. Only after the slider reaches completion may the backend perform any official FPL write. Before this step, do not send an official transfer request. Show free transfers, bank, hit cost, outgoing/incoming players and captain/bench changes. If the write fails, show a recoverable error without pretending success. Provide an accessibility alternative confirmation action where needed, but keep the intentional-confirmation requirement.
+
+MEDIA / ASSET API
+GET /api/assets -> returns key, mobile_url, desktop_url, fallback_url, version, focal_x, focal_y, alt_text. Flutter caches images and refreshes when version changes. Backend should resize/compress uploads and support WebP/AVIF.
+
+SUGGESTED DATA MODELS
+User, FPLConnection, FPLTeamSnapshot, Player, Fixture, Gameweek, League, LeagueMember, LeagueManagerPermission, Clan, ClanMember, JoinRequest, Mode, ModeParticipant, RankingStanding, CivilWarGameweek, CivilWarClanScore, SurvivorSchedule, SurvivorRound, SurvivorStanding, H2HFixture, H2HStanding, PrizePool, Achievement, Notification, MediaAsset, AuditLog, TransferDraft, TransferReview, TransferConfirmation.
+
+LIVE / CALCULATION SAFETY
+Mode calculations must be deterministic and auditable. Store source Gameweek IDs, calculation version and finalization timestamp. Never silently rewrite historical standings after finalization; use an admin correction action with an audit trail.
+
+PERFORMANCE
+Cache images and FPL reference data. Lazy-load long lists. Paginate history/activity. Use const widgets and RepaintBoundary for charts/pitch. Avoid excessive blur. Target smooth 60fps.
+
+ACCESSIBILITY
+Readable contrast, semantic labels, 44dp targets, text scaling, status not encoded by color alone, keyboard/focus support on desktop, reduced-motion support and alternate accessible confirmation where a drag gesture is otherwise required.
+
+IMPLEMENTATION ORDER
+1) Theme/tokens + responsive shell + reusable components.
+2) A01-A10 Auth/FPL onboarding.
+3) A11-A20 FPL/home/live.
+4) A21-A32 Leagues/Hall of Fame.
+5) A33-A37 Modes hub/Ranking.
+6) A38-A43 Civil War.
+7) A44-A50 Last Survivor.
+8) A51-A55 H2H.
+9) A56-A60 Clans.
+10) A61-A63 Profile/settings.
+11) T01-T04 transfer workflow.
+12) Admin media system and final responsive QA.
+
+CODE QUALITY
+Use feature-first Flutter structure: lib/core/theme, lib/core/network, lib/core/responsive, lib/shared/widgets, lib/features/<feature>/data, domain, presentation. Flask uses blueprints/modules per feature, service/repository layers, migrations, validation schemas, rate limits and tests. Avoid giant files and duplicated layout code.
+
+IMPORTANT
+The provided page photos are the visual source of truth for composition. Do not downgrade them into generic Material cards. Preserve cinematic hero identity, contextual artwork, dense information hierarchy and page-specific visuals throughout the final app.

@@ -1,0 +1,67 @@
+01. A01 — Splash Screen
+02. A02 — Welcome / Get Started
+03. A03 — Login
+04. A04 — Register / Create Account
+05. A05 — Forgot / Reset Password
+06. A06 — Connect with FPL
+07. A07 — FPL Connecting / Syncing
+08. A08 — FPL Connected / Team Found
+09. A09 — What’s Next / Onboarding
+10. A10 — Notification Preferences
+11. A11 — Home Dashboard
+12. A12 — My Team / Pitch View
+13. A13 — Gameweek Points Detail
+14. A14 — Player Details
+15. A15 — Player Full Profile / Stats
+16. A16 — Fixtures
+17. A17 — Live Match Centre
+18. A18 — Match Detail
+19. A19 — Match Timeline / Events
+20. A20 — Match Lineups & Stats
+21. A21 — My Leagues
+22. A22 — League Directory / Discover
+23. A23 — Join League
+24. A24 — Create League
+25. A25 — League Overview
+26. A26 — League Standings
+27. A27 — League Members & Managers
+28. A28 — League Join Requests
+29. A29 — League Rules
+30. A30 — League History
+31. A31 — Hall of Fame
+32. A32 — Hall of Fame Season Detail
+33. A33 — Modes Hub
+34. A34 — Ranking Mode Overview
+35. A35 — Ranking Full Standings
+36. A36 — Ranking Gameweek Detail
+37. A37 — Ranking Prize Pool
+38. A38 — Civil War Overview
+39. A39 — Civil War Standings
+40. A40 — Civil War Gameweek Battle
+41. A41 — Civil War Clan Detail
+42. A42 — Civil War GW History
+43. A43 — Civil War Rules & War Points
+44. A44 — Last Survivor Overview
+45. A45 — Last Survivor Standings
+46. A46 — Last Survivor Gameweek / Round Detail
+47. A47 — Last Survivor Elimination History
+48. A48 — Survivor Schedule Builder / Player Count
+49. A49 — Survivor Fixture / Round Preview
+50. A50 — Survivor Settings / Create Mode
+51. A51 — Head-to-Head Overview
+52. A52 — H2H Fixtures
+53. A53 — H2H Live Match
+54. A54 — H2H Standings
+55. A55 — H2H Bracket / Results
+56. A56 — Clan Hub / Overview
+57. A57 — Clan Members
+58. A58 — Clan Leaderboard / Performance
+59. A59 — Clan Requests / Invites
+60. A60 — Clan Settings / Manage
+61. A61 — My Profile
+62. A62 — Edit Profile
+63. A63 — Settings / Connected FPL Account
+64. T01 — Transfer / Build Team
+65. T02 — Transfer / Review Changes
+66. T03 — Transfer / Slide to Confirm
+67. T04 — Transfer / Success / Updated Team

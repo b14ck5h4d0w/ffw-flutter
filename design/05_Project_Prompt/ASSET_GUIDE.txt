@@ -1,0 +1,12 @@
+FFW ASSET GUIDE
+===============
+04_Assets contains standalone reusable defaults generated for the project:
+- logo_ffw_badge.png
+- logo_ffw_wordmark.png
+- app_icon_ffw.png
+- badge_ranking.png / badge_civil_war.png / badge_last_survivor.png / badge_h2h.png / badge_clan.png / badge_league.png
+- banner_home.jpg / banner_league.jpg / banner_clan.jpg / banner_ranking.jpg / banner_civil_war.jpg / banner_last_survivor.jpg / banner_h2h.jpg / banner_hall_of_fame.jpg / banner_transfer.jpg
+- timeline_cover.jpg / season_cover.jpg / clan_cover.jpg
+- icon_sheet_20.png and 20 standalone icon_*.png files
+
+All of these are intended as default visual assets only. In production, Admin Panel must be able to replace them without app code changes.

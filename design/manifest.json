@@ -1,0 +1,343 @@
+{
+  "logical_pages": 67,
+  "mobile_previews": 67,
+  "desktop_previews": 67,
+  "combined_boards": 67,
+  "pages": [
+    {
+      "id": "A01",
+      "title": "Splash Screen",
+      "category": "auth"
+    },
+    {
+      "id": "A02",
+      "title": "Welcome / Get Started",
+      "category": "auth"
+    },
+    {
+      "id": "A03",
+      "title": "Login",
+      "category": "auth"
+    },
+    {
+      "id": "A04",
+      "title": "Register / Create Account",
+      "category": "auth"
+    },
+    {
+      "id": "A05",
+      "title": "Forgot / Reset Password",
+      "category": "auth"
+    },
+    {
+      "id": "A06",
+      "title": "Connect with FPL",
+      "category": "auth"
+    },
+    {
+      "id": "A07",
+      "title": "FPL Connecting / Syncing",
+      "category": "auth"
+    },
+    {
+      "id": "A08",
+      "title": "FPL Connected / Team Found",
+      "category": "auth"
+    },
+    {
+      "id": "A09",
+      "title": "What\u2019s Next / Onboarding",
+      "category": "auth"
+    },
+    {
+      "id": "A10",
+      "title": "Notification Preferences",
+      "category": "auth"
+    },
+    {
+      "id": "A11",
+      "title": "Home Dashboard",
+      "category": "game"
+    },
+    {
+      "id": "A12",
+      "title": "My Team / Pitch View",
+      "category": "game"
+    },
+    {
+      "id": "A13",
+      "title": "Gameweek Points Detail",
+      "category": "game"
+    },
+    {
+      "id": "A14",
+      "title": "Player Details",
+      "category": "game"
+    },
+    {
+      "id": "A15",
+      "title": "Player Full Profile / Stats",
+      "category": "profile"
+    },
+    {
+      "id": "A16",
+      "title": "Fixtures",
+      "category": "game"
+    },
+    {
+      "id": "A17",
+      "title": "Live Match Centre",
+      "category": "game"
+    },
+    {
+      "id": "A18",
+      "title": "Match Detail",
+      "category": "game"
+    },
+    {
+      "id": "A19",
+      "title": "Match Timeline / Events",
+      "category": "game"
+    },
+    {
+      "id": "A20",
+      "title": "Match Lineups & Stats",
+      "category": "game"
+    },
+    {
+      "id": "A21",
+      "title": "My Leagues",
+      "category": "league"
+    },
+    {
+      "id": "A22",
+      "title": "League Directory / Discover",
+      "category": "league"
+    },
+    {
+      "id": "A23",
+      "title": "Join League",
+      "category": "league"
+    },
+    {
+      "id": "A24",
+      "title": "Create League",
+      "category": "league"
+    },
+    {
+      "id": "A25",
+      "title": "League Overview",
+      "category": "league"
+    },
+    {
+      "id": "A26",
+      "title": "League Standings",
+      "category": "league"
+    },
+    {
+      "id": "A27",
+      "title": "League Members & Managers",
+      "category": "league"
+    },
+    {
+      "id": "A28",
+      "title": "League Join Requests",
+      "category": "league"
+    },
+    {
+      "id": "A29",
+      "title": "League Rules",
+      "category": "league"
+    },
+    {
+      "id": "A30",
+      "title": "League History",
+      "category": "league"
+    },
+    {
+      "id": "A31",
+      "title": "Hall of Fame",
+      "category": "league"
+    },
+    {
+      "id": "A32",
+      "title": "Hall of Fame Season Detail",
+      "category": "league"
+    },
+    {
+      "id": "A33",
+      "title": "Modes Hub",
+      "category": "game"
+    },
+    {
+      "id": "A34",
+      "title": "Ranking Mode Overview",
+      "category": "ranking"
+    },
+    {
+      "id": "A35",
+      "title": "Ranking Full Standings",
+      "category": "ranking"
+    },
+    {
+      "id": "A36",
+      "title": "Ranking Gameweek Detail",
+      "category": "ranking"
+    },
+    {
+      "id": "A37",
+      "title": "Ranking Prize Pool",
+      "category": "ranking"
+    },
+    {
+      "id": "A38",
+      "title": "Civil War Overview",
+      "category": "civil_war"
+    },
+    {
+      "id": "A39",
+      "title": "Civil War Standings",
+      "category": "civil_war"
+    },
+    {
+      "id": "A40",
+      "title": "Civil War Gameweek Battle",
+      "category": "civil_war"
+    },
+    {
+      "id": "A41",
+      "title": "Civil War Clan Detail",
+      "category": "civil_war"
+    },
+    {
+      "id": "A42",
+      "title": "Civil War GW History",
+      "category": "civil_war"
+    },
+    {
+      "id": "A43",
+      "title": "Civil War Rules & War Points",
+      "category": "civil_war"
+    },
+    {
+      "id": "A44",
+      "title": "Last Survivor Overview",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A45",
+      "title": "Last Survivor Standings",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A46",
+      "title": "Last Survivor Gameweek / Round Detail",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A47",
+      "title": "Last Survivor Elimination History",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A48",
+      "title": "Survivor Schedule Builder / Player Count",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A49",
+      "title": "Survivor Fixture / Round Preview",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A50",
+      "title": "Survivor Settings / Create Mode",
+      "category": "last_survivor"
+    },
+    {
+      "id": "A51",
+      "title": "Head-to-Head Overview",
+      "category": "h2h"
+    },
+    {
+      "id": "A52",
+      "title": "H2H Fixtures",
+      "category": "h2h"
+    },
+    {
+      "id": "A53",
+      "title": "H2H Live Match",
+      "category": "h2h"
+    },
+    {
+      "id": "A54",
+      "title": "H2H Standings",
+      "category": "h2h"
+    },
+    {
+      "id": "A55",
+      "title": "H2H Bracket / Results",
+      "category": "h2h"
+    },
+    {
+      "id": "A56",
+      "title": "Clan Hub / Overview",
+      "category": "clan"
+    },
+    {
+      "id": "A57",
+      "title": "Clan Members",
+      "category": "clan"
+    },
+    {
+      "id": "A58",
+      "title": "Clan Leaderboard / Performance",
+      "category": "clan"
+    },
+    {
+      "id": "A59",
+      "title": "Clan Requests / Invites",
+      "category": "clan"
+    },
+    {
+      "id": "A60",
+      "title": "Clan Settings / Manage",
+      "category": "clan"
+    },
+    {
+      "id": "A61",
+      "title": "My Profile",
+      "category": "profile"
+    },
+    {
+      "id": "A62",
+      "title": "Edit Profile",
+      "category": "profile"
+    },
+    {
+      "id": "A63",
+      "title": "Settings / Connected FPL Account",
+      "category": "auth"
+    },
+    {
+      "id": "T01",
+      "title": "Transfer / Build Team",
+      "category": "transfer"
+    },
+    {
+      "id": "T02",
+      "title": "Transfer / Review Changes",
+      "category": "transfer"
+    },
+    {
+      "id": "T03",
+      "title": "Transfer / Slide to Confirm",
+      "category": "transfer"
+    },
+    {
+      "id": "T04",
+      "title": "Transfer / Success / Updated Team",
+      "category": "transfer"
+    }
+  ]
+}
